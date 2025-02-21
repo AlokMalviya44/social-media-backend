@@ -169,7 +169,7 @@ export const commentOnPost = async (req, res, next) => {
       post,
       user: req.user._id,
       text,
-      parentComment: comment.parentComment || parentComment,
+      parentComment,
     });
 
     await currentPost.incrementCommentCount();
